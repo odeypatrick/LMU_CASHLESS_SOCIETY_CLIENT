@@ -1,50 +1,25 @@
-import Header from './components/Header'
-import Todos from './components/Todos'
-import AddTodo from './components/AddTodo'
-import { useState } from 'react'
+import SideNav from './components/side-nav/SideNav'
+import Dashboard from './dashboard/Dashboard'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: "Take out trash",
-      isCompleted: false
-    },
-    {
-        id: 2,
-        text: "Dinner with family",
-        isCompleted: false
-    }
-  ])
 
-  const deleteTodo = (id) => {
-    setTodos(
-      todos.filter(todo => 
-        todo.id !== id 
-      )
-    )
-  } 
-
-  const toggleCompleted = (id) => {
-    setTodos(
-      todos.map(todo => 
-        todo.id === id ? { ...todo, isCompleted: 
-          !todo.isCompleted } : todo  
-      )
-    )
-  }
-
-  const AddTodos = (todo) => {
-    const id = Math.floor(Math.random() * 10000) + 1
-    const newTodo = { id, ...todo }
-    setTodos([...todos, newTodo])
-  }
-
-  return (
+    return (
     <div className="App">
-      <Header name="Patrick"/>
-      <AddTodo onAdd={AddTodos}/>
-      <Todos todos={todos} onToggle={toggleCompleted} onDelete={deleteTodo}/>
+      <SideNav/>
+      <Router>
+      <Switch>
+          <Route path="/">
+            <Dashboard/>
+          </Route>
+        </Switch>
+      </Router>
+
     </div>
   );
 }

@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,51 +17,10 @@ header {
   font-size: 17px;
 }
 
-.todo-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 10px;
-  border-bottom: 1px solid #f3f3f3;
-  align-items: center;
-}
-
-.is-completed {
-  display: flex;
-  align-items: center;
-}
-
-.is-completed input {
-  margin-right: 10px;
-}
-
-.todo-item .del-btn:hover {
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.cancel {
-  text-decoration: line-through;
-}
-
-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-form input {
-  flex: 5;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  outline: none;
-}
-
-form button {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  font-weight: bold;
-  background-color: #fff;
+.button {
+  font-size: 14px;
   font-family: inherit;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
 }
