@@ -1,0 +1,11 @@
+.app {
+    display: flex;
+}
+
+.nav {
+    flex: 1.5;
+}
+
+.display {
+    flex: 6;
+}

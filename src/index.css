@@ -5,10 +5,11 @@
 
 body {
   margin: 0;
-  font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet', sans-serif;
+  font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 header {
   background-color: #123;
@@ -23,4 +24,37 @@ header {
   font-weight: bold;
   border: none;
   border-radius: 5px;
+}
+
+.pay-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: #04724d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  color: #fff;
+  box-shadow: 0 0 6px 3px #ccc;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
