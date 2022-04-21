@@ -1,10 +1,12 @@
 const Header = ({ page }) => {
     const style = {
         header: {
-            padding: '10px',
-            borderBottom: '1px solid #f3f3f3',
+            padding: '5px 20px',
+            borderBottom: '1px solid #eee',
             display: 'flex',
-            'justify-content': 'space-between'
+            'justify-content': 'space-between',
+            'margin-bottom': '20px',
+            backgroundColor: '#fff'
         },
         userImg: {
             height: '30px',
@@ -14,16 +16,32 @@ const Header = ({ page }) => {
         },
         img: {
             width: '100%'
+        },
+        fakeInput: {
+            background: '#fff',
+            'border-radius': '20px',
+            'display': 'flex',
+            'align-items': 'center',
+            'justify-content': 'space-between',
+            'overflow': 'hidden',
+            'width': '350px',
+            padding: '0 10px',
+            color: '#ccc',
+            'margin-left': '20px',
+            border: '1px solid #ccc'
         }
     }
 
     return (
         <div className="app-header" style={style.header}>
             <div>
-                <h2>{ page }</h2>
+                <div className="fake-input" style={style.fakeInput}>
+                    <input type="text" placeholder="Search"/>
+                    <i className="fa fa-search"></i>
+                </div>
             </div>
 
-            <div className="user flex-a">
+            <div className="user flex-a" style={{ cursor: 'pointer' }}>
                 <div className="user-img" style={style.userImg}>
                     <img style={style.img} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCFiC2uxAgDWKIecVHsdIcTS4Sjmtu4mhLRg&usqp=CAU"/>
                 </div>

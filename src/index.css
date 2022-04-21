@@ -58,3 +58,11 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+input {
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  font-family: inherit;
+  outline: none;
+}

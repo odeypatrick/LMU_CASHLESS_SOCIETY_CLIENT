@@ -1,6 +1,6 @@
 import './Nav.css'
 import {
-    Link
+    NavLink
 } from "react-router-dom"; 
 
 const SideNav = () => {
@@ -11,10 +11,10 @@ const SideNav = () => {
             </div>
 
             <div className="links">
-                 <Link to="/"><i className="fa fa-th-large"></i> Dashboard</Link>
-                 <Link to="/"><i className="fa fa-history"></i> History</Link>
-                 <Link to="/"><i className="fa fa-line-chart"></i> Analytics</Link>
-                 <Link to="/"><i className="fa fa-cog"></i> Settings</Link>
+                 <NavLink to="/" exact><i className="fa fa-th-large"></i> Dashboard</NavLink>
+                 <NavLink to="/history"><i className="fa fa-history"></i> History</NavLink>
+                 <NavLink to="/analytics"><i className="fa fa-line-chart"></i> Analytics</NavLink>
+                 <NavLink to="/settings"><i className="fa fa-cog"></i> Settings</NavLink>
             </div>
         </div>
     )
