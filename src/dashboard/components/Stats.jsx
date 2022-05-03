@@ -8,7 +8,7 @@ const Stats = () => {
 
             <div className="entry">
                 <p className="text">255</p>
-                <p className="light-text">Total Entries</p>
+                <p className="light-text">Total Sales</p>
             </div>
         </div>
 
@@ -18,8 +18,8 @@ const Stats = () => {
             </div>
 
             <div className="entry">
-                <p className="text">255</p>
-                <p className="light-text">Clocked</p>
+                <p className="text">25</p>
+                <p className="light-text">Today Sales</p>
             </div>
         </div>
 
@@ -29,8 +29,8 @@ const Stats = () => {
             </div>
 
             <div className="entry">
-                <p className="text">300</p>
-                <p className="light-text">In</p>
+                <p className="text">10</p>
+                <p className="light-text">Failed Transactions</p>
             </div>
         </div>
 
@@ -40,8 +40,8 @@ const Stats = () => {
             </div>
 
             <div className="entry">
-                <p className="text">25</p>
-                <p className="light-text">Out</p>
+                <p className="text">$25</p>
+                <p className="light-text">Balance</p>
             </div>
         </div>
         </div>
