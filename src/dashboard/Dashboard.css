@@ -2,6 +2,23 @@
     padding: 0 20px;
 }
 
+.pay-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: #04724d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    color: #fff;
+    box-shadow: 0 0 6px 3px #ccc;
+    cursor: pointer;
+  }
+
 .stats{
     display: flex;
     justify-content: space-between;

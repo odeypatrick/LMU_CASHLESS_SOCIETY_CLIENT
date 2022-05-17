@@ -2,7 +2,8 @@ import AppHeader from '../components/Header/Header'
 import Stats from './components/Stats'
 import Entry from './components/Entry'
 import './Dashboard.css'
-
+import { Link } from 'react-router-dom'
+ 
 const Dashboard = () => {
     return (
         <div>
@@ -14,9 +15,11 @@ const Dashboard = () => {
                 <Entry/>
             </div>
             
-            <div className="pay-btn">
-                <i className="fa fa-credit-card"></i>
-            </div>
+            <Link to="/pay">
+                <div className="pay-btn">
+                    <i className="fa fa-credit-card"></i>
+                </div>
+            </Link>
         </div>
     )
 }
