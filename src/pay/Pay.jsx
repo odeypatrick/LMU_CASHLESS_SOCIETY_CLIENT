@@ -1,14 +1,17 @@
 import Header from '../components/Header/Header'
 import { useState, useEffect } from 'react'
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
+// import SweetAlert2 from 'react-sweetalert2';
+import axios from 'axios'
 
 
 const Pay = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState(false)
     const [amount, setAmount] = useState('')
-    const [data, setData] = useState("Not Found");
+    const [data, setData] = useState("Null");
     const [torchOn, setTorchOn] = useState(false);
+    // const [swalProps, setSwalProps] = useState({});
 
     useEffect(() => {
         setError('')
@@ -50,6 +53,7 @@ const Pay = () => {
                             <span className="close-btn" onClick={e => setError('')}>&times;</span>
                         </div> : null
                     }
+                    {/* <SweetAlert2 {...swalProps}/> */}
                     <form>
                         <div>
                             <label>Total amount</label>
@@ -71,16 +75,21 @@ const Pay = () => {
                         onUpdate={(err, result) => {
                             if (result) {
                                 setData(result.text)
-                                setSuccess(true)
+                                axios.get(`http://localhost:5000/api/card/${result.text}`)
+                                .then(res => {
+                                    console.log(res.data)
+                                    setSuccess(true)
+                                })
+                                .catch(err => console.log(err))
                             }
                             else {
-                                setData("Not Found")
+                                setData("Null")
                                 // setError("Not recognised")
                             };
                         }}
                     />
-                    <p>{data}</p>
-                    <button class="torchBtn button" onClick={() => setTorchOn(!torchOn)}>
+                    <p>Reg Number: {data}</p>
+                    <button className="torchBtn button" onClick={() => setTorchOn(!torchOn)}>
                         Switch Torch {torchOn ? "Off" : "On"}
                     </button>
                 </div>

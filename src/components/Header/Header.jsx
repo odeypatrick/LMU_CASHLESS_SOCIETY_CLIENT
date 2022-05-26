@@ -7,8 +7,8 @@ const Header = ({ page }) => {
             padding: '10px 20px',
             borderBottom: '1px solid #eee',
             display: 'flex',
-            'justify-content': 'space-between',
-            'margin-bottom': '20px',
+            justifyContent: 'space-between',
+            marginBottom: '20px',
             backgroundColor: '#fff'
         },
         userImg: {
@@ -22,13 +22,13 @@ const Header = ({ page }) => {
         },
         fakeInput: {
             background: '#fff',
-            'border-radius': '20px',
-            'display': 'flex',
-            'align-items': 'center',
-            'justify-content': 'space-between',
-            'overflow': 'hidden',
-            'padding': '5px 10px',
-            'width': '350px',
+            borderRadius: '20px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            overflow: 'hidden',
+            padding: '5px 10px',
+            width: '350px',
             color: '#ccc',
             height: '20px',
             border: '1px solid #ccc'
