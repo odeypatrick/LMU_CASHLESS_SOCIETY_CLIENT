@@ -8,7 +8,7 @@ const Login = () => {
 
     const loginUser = (e) => {
         e.preventDefault()
-        axios.post('https://localhost:5000/api/login', {
+        axios.post('http://localhost:5000/api/login', {
             regNumber,
             password
         })
