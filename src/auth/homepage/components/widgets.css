@@ -1,0 +1,9 @@
+.balance {
+    padding: 20px;
+    background-color: #2086bd;
+    color: #fff;
+    width: 300px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+}

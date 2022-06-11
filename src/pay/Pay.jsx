@@ -2,6 +2,7 @@ import Header from '../components/Header/Header'
 import { useState, useEffect } from 'react'
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
 // import SweetAlert2 from 'react-sweetalert2';
+import './Pay.css'
 import axios from 'axios'
 
 
@@ -17,14 +18,14 @@ const Pay = () => {
         setError('')
     }, [])
 
-    const makePayment = async () => {
-        try {
+    // const makePayment = async () => {
+    //     try {
             
-        } 
-        catch (error) {
+    //     } 
+    //     catch (error) {
 
-        }
-    }
+    //     }
+    // }
 
     return (
         <>

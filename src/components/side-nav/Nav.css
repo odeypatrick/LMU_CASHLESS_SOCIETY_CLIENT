@@ -1,7 +1,7 @@
 .side-nav {
-    background-color: #04724d;
+    background-color: #184a70;
     height: 100vh;
-    padding: 30px;
+    padding: 20px;
 }
 
 .logo {
@@ -24,6 +24,11 @@
     border-radius: 5px;
 }
 
+.links a i {
+    margin-right: 20px;
+}
+
 .links a:hover, .active {
-    background: #8db38b;
+    background: #aaaaaa;
+    color: #000;
 }
