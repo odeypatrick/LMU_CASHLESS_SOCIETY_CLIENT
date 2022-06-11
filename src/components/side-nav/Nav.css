@@ -1,5 +1,5 @@
 .side-nav {
-    background-color: #184a70;
+    background-color: #465775;
     height: 100vh;
     padding: 20px;
 }
@@ -29,6 +29,6 @@
 }
 
 .links a:hover, .active {
-    background: #aaaaaa;
+    background: #59C9A5;
     color: #000;
 }
