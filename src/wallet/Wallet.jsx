@@ -2,12 +2,24 @@ import SideNav from '../components/side-nav/SideNav'
 import AppHeader from '../components/Header/Header'
 import Withdraw from './components/Withdraw'
 import Deposit from './components/Deposit'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import './Wallet.css'
 
 const Wallet = () => {
-    
+    const [balance, setBalance] = useState(0.00)
+
+    useEffect(() => {
+      getBalance()
+    }, [])
+
+    const getBalance = () => {
+      axios.get('http://localhost:5000/api/wallet/62724fade149ea59a7d1565f/balance')
+      .then(res => setBalance(res.data))
+      .catch(err => console.log(err))
+    }
+
     const [currentTab, setCurrentTab] = useState('withdraw')
 
     return (
@@ -20,7 +32,7 @@ const Wallet = () => {
                 <div className="body">
                     <div className="balance">
                         Balance
-                        <h2>4,600</h2>
+                        <h2>{balance}</h2>
                     </div>
 
                     <div className="tabs flex">
