@@ -20,7 +20,7 @@ const SideNav = ({ type }) => {
             : <div className="links">
                  <NavLink to="/dashboard" exact><i className="fa fa-th-large"></i> Dashboard</NavLink>
                  <NavLink to="/wallet"><i className="fa fa-wallet"></i> Wallet</NavLink>
-                 <NavLink to="/history"><i className="fa fa-history"></i> Wallet</NavLink>
+                 <NavLink to="/history"><i className="fa fa-history"></i> History</NavLink>
                  <NavLink to="/analytics"><i className="fa fa-line-chart"></i> Analytics</NavLink>
                  <NavLink to="/settings"><i className="fa fa-cog"></i> Settings</NavLink>
             </div> }
