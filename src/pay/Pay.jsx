@@ -9,7 +9,7 @@ import axios from 'axios'
 const Pay = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState(false)
-    const [amount, setAmount] = useState('')
+    const [amount, setAmount] = useState(1000)
     const [data, setData] = useState("Null");
     const [torchOn, setTorchOn] = useState(false);
     // const [swalProps, setSwalProps] = useState({});
@@ -76,7 +76,10 @@ const Pay = () => {
                         onUpdate={(err, result) => {
                             if (result) {
                                 setData(result.text)
-                                axios.get(`http://localhost:5000/api/card/${result.text}`)
+                                axios.post(`http://localhost:5000/api/wallet/charge`, {
+                                    regNumber: result.text,
+                                    amount: amount
+                                })
                                 .then(res => {
                                     console.log(res.data)
                                     setSuccess(true)
