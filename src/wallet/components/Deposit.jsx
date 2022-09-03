@@ -30,7 +30,7 @@ const Deposit = () => {
         ...config,
         text: 'Pay with Flutterwave!',
         callback: (response) => {
-           axios.get(`http://localhost:5000/api/response/${response.transaction_id}`)
+           axios.get(`https://polar-tundra-07723.herokuapp.com/api/response/${response.transaction_id}`)
            .then(res => {
                console.log(res.data)
            })

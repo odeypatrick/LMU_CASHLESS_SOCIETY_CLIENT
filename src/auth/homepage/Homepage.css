@@ -5,3 +5,7 @@
 .body > div {
     margin-bottom: 20px;
 }
+
+.records {
+    height: 300px;
+}

@@ -78,7 +78,8 @@
 
 .trans-history {
     background-color: #fff;
-    height: 40vh;
+    height: 50vh;
+	overflow: auto;
     border-radius: 20px;
 }
 
